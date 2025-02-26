@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>2356210036 - Nguyễn Thị Hồng Nhung</title>
+<script> 
+function Tinhtong(x1,x2)
+{
+return parseInt(x1) + parseInt(x2);
+}
+
+function Tinhtich(x1,x2)
+{
+return parseInt(x1) * parseInt(x2);
+}
+function Tinhhieu(x1,x2)
+{
+return parseInt(x1) - parseInt(x2);
+}
+function Tinhthuong(x1,x2)
+{
+return parseInt(x1) / parseInt(x2);
+}
+function Tinhtongdayso(x1,x2)
+{
+var  tong; 
+tong=0; 
+for (let i=parseInt(x1); i<=parseInt(x2); i++)
+tong=tong + i;
+localStorage.x=tong; <!--Ghi nhận lại kết quả, kể cả khi xóa thông tin-->
+return tong;
+}
+
+function Thongbao()
+{
+for(let i = 1; i <= 2; i++) 
+ alert(localStorage.x);
+}
+
+</script>
+</head>
+<body>
+
+<form>
+<label> Số thứ 1: </label> 
+<input type= "text" id= "Sothu1" name= "Sothu1">
+<br> <br> 
+<label> Số thứ 2: </label> 
+<input type= "text" id= "Sothu2" name= "Sothu2">
+<br> <br>
+<label> Số thứ 3: </label> 
+<input type= "text" id= "Sothu3" name= "Sothu3">
+<br> <br>
+<input type="button" onclick="Sothu3.value=Tinhtong(Sothu1.value,Sothu2.value)" value="Tính tổng">
+<br> <br>
+<input type="button" onclick="Sothu3.value=Tinhtich(Sothu1.value,Sothu2.value)" value="Tính tích">
+<br> <br>
+<input type="button" onclick="Sothu3.value=Tinhhieu(Sothu1.value,Sothu2.value)" value="Tính hiệu">
+<br> <br>
+<input type="button" onclick="Sothu3.value=Tinhthuong(Sothu1.value,Sothu2.value)" value="Tính thương">
+<br> <br>
+<input type="button" onclick="Sothu3.value=Tinhtongdayso(Sothu1.value,Sothu2.value)" value="Tính tổng dãy số">
+<br> <br>
+<input type="button" onclick="Thongbao()" value="Thông báo">
+</form>
+</body>
+</html>
